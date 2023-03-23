@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+.container {  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 1fr;
+  grid-template-rows: 0.4fr 2.2fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "graph graph graph"
+    ". . .";
+}
+
+.header { 
+  color: #0e1319;
+  grid-area: header; 
+  text-align: center;
+}
+
+.graph {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 2.7fr 0.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "graphTitle"
+    "graphTool"
+    "graphSettings";
+  grid-area: graph;
+}
+
+.graphTool { 
+  color: #fbfff1;
+  background-color: #1b2431;
+  grid-area: graphTool; 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#myChart {
+  margin: 20px;
+}
+
+.graphTitle { 
+  border-top-left-radius: 15px;
+  border-top-right-radius: 155px;
+  text-align: left;
+  padding-left: 20px;
+  color: #fbfff1;
+  background-color: #0e1319;
+  grid-area: graphTitle; 
+}
+
+.graphSettings { 
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 155px;
+  color: #fbfff1;
+  background-color: #0e1319;
+  grid-area: graphSettings; 
+}
+
+.button {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 40px;
+  height: 40px;
+  background-position: center center;
+  margin: 20px 40px 20px 20px;
+  float: right;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0e1319;
+  border: none;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  width: 42px;
+  height: 42px;
+}
+
+.btn1 {
+  background-image: url('img/width.png');
+}
+
+.btn2 {
+  background-image: url('img/zoom-in.png');
+}
+
+.btn3 {
+  background-image: url('img/zoom-out.png');
+}
+
+.btn4 {
+  background-image: url('img/reset.png');
+}
+
+html, body , .container {
+  margin: 10px 10px 10px 10px;
+  background-color: #fbfff1;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
